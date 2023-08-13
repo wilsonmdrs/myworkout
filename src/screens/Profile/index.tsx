@@ -4,28 +4,27 @@ import {ScreenHeader} from '@components/ScreenHeader';
 import {UserPhoto} from '@components/UserPhoto';
 import {ScrollView, VStack, Center, Text, Heading} from 'native-base';
 import {useState} from 'react';
-import {TouchableOpacity} from 'react-native';
-// import { launchImageLibrary } from 'react-native-image-picker';
-// import ImagePicker from 'react-native-image-crop-picker';
+import {Alert, TouchableOpacity} from 'react-native';
+import ImagePicker from 'react-native-image-crop-picker';
 
 export const Profile = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleUserPhotoSelect = async () => {
-    // const result = await launchImageLibrary({
-    //   mediaType:'photo',
-    //   quality:1,
-      
-    // })
-    // ImagePicker.openPicker({
-    //   mediaType:"photo",
-    //   quality:1,
-    //   width:300,
-    //   height: 400,
-    //   cropping: true,
-    // }).then(image => {
-    //   console.log(image);
-    // });
+    ImagePicker.openPicker({
+      mediaType:"photo",
+      quality:1,
+      width:300,
+      height: 400,
+      cropping: true,
+    })
+    .then(image => {
+      console.log(image);
+    })
+    .catch( e => {
+      console.warn(e)
+    })
+
 
   }
   return (
