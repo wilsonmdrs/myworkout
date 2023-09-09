@@ -26,33 +26,37 @@ export const Exercise = () => {
   const handleGoBack = () => navigation.goBack();
   return (
     <VStack flex={1}>
-        <VStack px={8} bg="gray.600" pt={8}>
-          <TouchableOpacity onPress={handleGoBack}>
-            <Icon
-              as={(props: FontAwesomeProps) => (
-                <FontAwesomeIcon {...props} icon={faArrowLeft} />
-              )}
-              name="icon"
-              color="green.500"
-            />
-          </TouchableOpacity>
-          <HStack
-            justifyContent="space-between"
-            mt={4}
-            mb={8}
-            alignItems={'center'}>
-            <Heading color="gray.100" fontSize={'lg'} flexShrink={1}>
-              Puxada Frontalsdasdasdas asdas das asd sad asd as
-            </Heading>
+      <VStack px={8} bg="gray.600" pt={8}>
+        <TouchableOpacity onPress={handleGoBack}>
+          <Icon
+            as={(props: FontAwesomeProps) => (
+              <FontAwesomeIcon {...props} icon={faArrowLeft} />
+            )}
+            name="icon"
+            color="green.500"
+          />
+        </TouchableOpacity>
+        <HStack
+          justifyContent="space-between"
+          mt={4}
+          mb={8}
+          alignItems={'center'}>
+          <Heading
+            color="gray.100"
+            fontSize={'lg'}
+            flexShrink={1}
+            fontFamily={'heading'}>
+            Puxada Frontalsdasdasdas asdas das asd sad asd as
+          </Heading>
 
-            <HStack>
-              <BodySVG />
-              <Text color="gray.200" ml={1} textTransform={'capitalize'}>
-                Costas
-              </Text>
-            </HStack>
+          <HStack>
+            <BodySVG />
+            <Text color="gray.200" ml={1} textTransform={'capitalize'}>
+              Costas
+            </Text>
           </HStack>
-        </VStack>
+        </HStack>
+      </VStack>
       <ScrollView>
         <VStack p={8}>
           <Image

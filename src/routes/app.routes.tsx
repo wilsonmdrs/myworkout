@@ -17,7 +17,7 @@ import ProfileSvg from '@assets/profile.svg';
 
 /* Native Base */
 import {useTheme} from 'native-base';
-import { Platform } from 'react-native';
+import {Platform} from 'react-native';
 
 type AppRoutes = {
   home: undefined;
@@ -43,13 +43,12 @@ export function AppRoutes() {
         tabBarActiveTintColor: colors.green[500],
         tabBarInactiveTintColor: colors.gray[200],
         tabBarStyle: {
-            backgroundColor:colors.gray[600],
-            borderTopWidth: 0,
-            height: 'auto',
-            paddingBottom: sizes[10],
-            paddingTop: sizes[6]
-        }
-
+          backgroundColor: colors.gray[600],
+          borderTopWidth: 0,
+          height: 'auto',
+          paddingBottom: sizes[10],
+          paddingTop: sizes[6],
+        },
       }}>
       <Screen
         name="home"
@@ -78,7 +77,11 @@ export function AppRoutes() {
           ),
         }}
       />
-      <Screen name="exercise" component={Exercise} options={{ tabBarButton: () => null }}/>
+      <Screen
+        name="exercise"
+        component={Exercise}
+        options={{tabBarButton: () => null}}
+      />
     </Navigator>
   );
 }

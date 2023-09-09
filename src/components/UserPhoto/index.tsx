@@ -2,7 +2,7 @@ import {Image, IImageProps, Skeleton} from 'native-base';
 
 type Props = IImageProps & {
   size: number;
-  isLoading: boolean;
+  isLoading?: boolean;
 };
 
 export const UserPhoto = ({size, isLoading, ...rest}: Props) => {
